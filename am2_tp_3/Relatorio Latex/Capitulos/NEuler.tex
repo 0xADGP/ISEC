@@ -1,0 +1,39 @@
+% Método de Euler
+%--------------------------------------
+\chapter{Método de Euler}
+
+\section*{3.1 Fórmulas}
+
+O método de Euler é um procedimento numérico de primeira ordem ($y'$) para aproximar a solução da equação diferencial que satisfaz a condição inicial:
+
+\begin{equation}
+y' = f(t, y)
+\end{equation}
+
+\begin{equation}
+y(t_0) = y_0
+\end{equation}
+
+O Método de Euler para resolver um Problema de Valor Inicial (PVI) é dado pela seguinte fórmula geral:
+
+\begin{equation}
+y_{i+1} = y_i + h f(t_i, y_i)
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $y_{i+1}$ → Próximo valor aproximado da solução do problema original (na abscissa $t_{i+1}$);
+    \item $y_i$ → Valor aproximado da solução do problema original na abscissa atual;
+    \item $h$ → Valor de cada subintervalo (passo);
+    \item $f(t_i , y_i)$ → Valor da equação em $t_i$ e $y_i$.
+\end{itemize}
+
+\section*{3.2 Algoritmo/Função}
+
+\textbf{Algoritmo:}
+\begin{enumerate}
+    \item Definir o valor do passo $h$;
+    \item Criar um vetor $y$ para guardar a solução e atribuir $y(1) = y_0$;
+    \item Atribuir o primeiro valor de $y$;
+    \item Para $i$ de $1$ a $n$, calcular o método de Euler para a $i$-ésima iteração.
+\end{enumerate}

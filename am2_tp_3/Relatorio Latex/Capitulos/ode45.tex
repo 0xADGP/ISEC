@@ -1,0 +1,45 @@
+% Função ode45 do MATLAB
+%--------------------------------------
+\chapter{Função \texttt{ode45} do MATLAB}
+
+\section*{8.1 Descrição}
+
+A função \texttt{ode45} do MATLAB é um dos métodos numéricos mais utilizados para resolver equações diferenciais ordinárias (EDOs). Ela é baseada no método de Runge-Kutta de ordem 4(5), ou seja, uma combinação de dois métodos de Runge-Kutta de ordens 4 e 5, que permite controle adaptativo do passo de integração.
+
+A função é adequada para a maioria dos problemas não-stiff e fornece uma solução com alta precisão de forma eficiente.
+
+\section*{8.2 Sintaxe}
+
+\begin{verbatim}
+[t, y] = ode45(@f, [t0 tf], y0)
+\end{verbatim}
+
+onde:
+\begin{itemize}
+    \item \texttt{@f} → Handle da função que define a EDO, ou seja, $y' = f(t, y)$;
+    \item \texttt{[t0 tf]} → Intervalo de integração, com tempo inicial $t_0$ e final $t_f$;
+    \item \texttt{y0} → Condição inicial da variável dependente $y$;
+    \item \texttt{t} → Vetor de tempos nos quais a solução foi avaliada;
+    \item \texttt{y} → Solução numérica aproximada da EDO nos tempos definidos em \texttt{t}.
+\end{itemize}
+
+\section*{8.3 Exemplo de Uso}
+
+\textbf{Exemplo: Resolver a equação diferencial $y' = -2y$, com $y(0) = 1$, de $t = 0$ até $t = 5$.}
+
+\begin{verbatim}
+f = @(t, y) -2*y;
+[t, y] = ode45(f, [0 5], 1);
+plot(t, y)
+xlabel('t')
+ylabel('y(t)')
+title('Solução da EDO usando ode45')
+\end{verbatim}
+
+\section*{8.4 Vantagens}
+
+\begin{itemize}
+    \item Método adaptativo: ajusta automaticamente o passo para maior precisão;
+    \item Simples de usar com apenas a definição da função e condições iniciais;
+    \item Ideal para problemas com solução suave e bem comportada.
+\end{itemize}

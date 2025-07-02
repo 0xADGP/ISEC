@@ -1,0 +1,47 @@
+% Método de Heun (Euler Melhorado)
+%--------------------------------------
+\chapter{Método de Euler Melhorado ou Modificado (Método de Heun)}
+
+\section*{4.1 Fórmulas}
+
+Este método também pode ser chamado de Método de Euler Melhorado ou Modificado, sendo equivalente a um método de Runge-Kutta de ordem 2.
+
+O Método de Heun para resolver um Problema de Valor Inicial (PVI) é dado pelas seguintes equações:
+
+\textbf{Fórmula Geral:}
+\begin{equation}
+y_{i+1} = y_i + \frac{h}{2}(k_1 + k_2)
+\end{equation}
+
+\textbf{Cálculo de $k_1$:}
+\begin{equation}
+k_1 = f(t_i, y_i)
+\end{equation}
+
+\textbf{Cálculo de $k_2$:}
+\begin{equation}
+k_2 = f(t_i + h, y_i + h k_1)
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $y_{i+1}$ → Próximo valor aproximado da solução do problema original (na abscissa $t_{i+1}$);
+    \item $y_i$ → Valor aproximado da solução do problema original na abscissa atual;
+    \item $h$ → Valor de cada subintervalo (passo);
+    \item $k_1$ → Inclinação no início do intervalo;
+    \item $k_2$ → Inclinação no fim do intervalo;
+    \item $f(t_i , y_i)$ → Valor da equação em $t_i$ e $y_i$.
+\end{itemize}
+
+\section*{4.2 Algoritmo/Função}
+
+\textbf{Algoritmo:}
+\begin{enumerate}
+    \item Definir o passo $h$;
+    \item Criar um vetor $y$ para guardar a solução;
+    \item Atribuir o primeiro valor de $y$ (condição inicial do PVI);
+    \item Calcular a inclinação no início do intervalo ($k_1$);
+    \item Calcular a inclinação no fim do intervalo ($k_2$);
+    \item Calcular a média das inclinações;
+    \item Calcular o valor aproximado para a $i$-ésima iteração.
+\end{enumerate}
