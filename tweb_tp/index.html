@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Imovirtual</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+		<header>
+			<nav>
+				<img class="nav-logo-mobile" src="logofooter.png" alt="">
+				<span class="menu-button-mobile" onclick="ToggleMobileMenu()"></span> <!--open-->
+				<div class="mobile-menu"> <!--show-->
+					<ul class="nav-bar">
+						<span class="nav-logo"><img src="logofooter.png" alt=""></span>
+						<li class="dropdown" onclick="ShowDropMenu(0)">
+							<a class="dropdown-toggle" href="#">Anúncios</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Para comprar</a></li>
+								<li><a href="#">Para arrendar</a></li>
+								<li><a href="#">Para férias</a></li>
+								<li><a href="#">Empreendimentos</a></li>
+							</ul>
+						</li>
+						<li  class="dropdown" onclick="ShowDropMenu(1)">
+							<a class="dropdown-toggle" href="#">Empreendimentos</a>
+							<ul class="dropdown-menu dropdown-menu-dobule">
+								<li>
+									<a href="#" class="mobile-topic">Ver todos os anúncios de Empreendimentos</a></li>
+								<li>
+									<span class="dropdown-menu-title">Tipo</span> 
+									<ul>
+										<li class="mobile-topic"><a href="#">Apartamentos novos</a></li>
+										<li class="mobile-topic"><a href="#">Moradias novas</a></li> 
+									</ul>
+								</li>
+								<li>
+									<span class="dropdown-menu-title">Promotores imobiliários populares</span>
+									<ul>
+										<li><a href="#">JJL Residencial</a></li>
+										<li><a href="#">Infate & Riu - Portugal Real Estate</a></li>
+										<li><a href="#">IMMOPO Real Estate</a></li>
+									</ul>
+								</li>
+								<li>
+									<span class="dropdown-menu-title">Localizações populares</span>
+									<ul>
+										<li><a href="#">Avenidas Novas</a></li>
+										<li><a href="#">Cedofeita</a></li>
+										<li><a href="#">Santo António</a></li>
+										<li><a href="#">Cascais e Estoril</a></li>
+										<li><a href="#">Misericórdia</a></li>
+										<li><a href="#">Matosinhos e Leça Palmeira</a></li>
+										<li><a href="#">Paranhos</a></li>
+										<li><a href="#">Bonfim</a></li>
+										<li><a href="#">Ramalde</a></li>
+										<li><a href="#">Aldoar</a></li>
+										<li><a href="#">Sanat Maria e São Pedro da Afurada</a></li>
+										<li><a href="#">Campo de Ourique</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown" onclick="ShowDropMenu(2)">	
+							<a class="dropdown-toggle" href="#">Profissionais</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Agências Imobiliárias</a></li>
+								<li><a href="#">Promotores Imobiliários</a></li>
+							</ul>
+						</li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">A Nossa Campanha</a></li>
+					</ul>					
+					<ul class="nav-bar navbar-right">
+						<hr class="separador-mobile">
+						<li><a href="#"><i class="far fa-user"></i> Conta Pessoal</a></li>
+						<hr class="separador-mobile">
+						<li class="dropdown" onclick="ShowDropMenu(3)">
+							<a class="dropdown-toggle lng" href="#">pt</a> 
+							<ul class="dropdown-menu lng-show">
+								<li><a href="#">português</a></li>	
+								<li><a href="#">english</a></li>
+							</ul>
+						</li>
+						<li><button class="add-ad">Adicionar Anúncio</button></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="hero-image">
+				<h1 class="text-center">O melhor sítio para comprar e arrendar casa em Portugal</h1>
+				<div class="tab-box-wrapper">
+					<div class="tab-container">
+						<center>
+							<div class="linha tab nav-bar">
+								<a href="">Pesquisar</a>
+								<a href="">Empreendimentos</a>
+							</div>
+							<div id="pesquisar">
+								<div class="linha">
+									<div class="linha-coluna dropdown-toggle"><a  href="#">Apartamentos</a></div>
+									<div class="linha-coluna"><a href="">para Comprar</a></div>
+									<div class="linha-coluna"><span class="gps"><i class="fas fa-map-marker-alt"></i></span><input type="text"></i></div>
+									<div class="linha-coluna search"><button id="btncalc" onclick="calc()"><i class="fas fa-search"></i> Pesquisar</button></div>
+								</div>
+								<div class="linha">
+									<div class="linha-coluna">
+										<button class="drop-button dropdown-toggle" onclick="ShowDropMenu(4)">Área útil (m²) <i class="fas fa-angle-down"></i></button>
+										<ul class="dropdown-menu tab-menu">
+											<li><span class="dropdown-menu-title">Área útil (m²)</span></li>
+											<li><input type="text" id="area" name="area"></li>
+											<li><a href="#">Limpar</a></li>
+										</ul>
+									</div>								
+									<div class="linha-coluna">
+										<button class="drop-button dropdown-toggle" onclick="ShowDropMenu(5)">Garagem <i class="fas fa-angle-down"></i></button>
+										<ul class="dropdown-menu tab-menu">
+											<li><span class="dropdown-menu-title">Garagem</span></li>
+											<li><input type="radio" name="garagem" id="garagem_sim"><span class="align-text">Sim</span></li>
+											<li><input type="radio" name="garagem" id="garagem_nao"><span class="align-text">Não</span></li>
+										</ul>
+									</div>
+									<div class="linha-coluna">
+										<button class="drop-button dropdown-toggle" onclick="ShowDropMenu(6)">Tipologia <i class="fas fa-angle-down"></i></button>
+										<ul class="dropdown-menu tab-menu">
+											<li><span class="dropdown-menu-title">Tipologia</span></li>
+												<li><input type="checkbox" onclick="ClearCheck(0)" name="group1[]" value="T0"><span class="align-text">T0</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(1)" name="group1[]" value="T1"><span class="align-text">T1</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(2)" name="group1[]" value="T2"><span class="align-text">T2</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(3)" name="group1[]" value="T3"><span class="align-text">T3</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(4)" name="group1[]" value="T4"><span class="align-text">T4</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(5)" name="group1[]" value="T5"><span class="align-text">T5</span> </li>
+												<li><input type="checkbox" onclick="ClearCheck(6)" name="group1[]" value="T5+"><span class="align-text">T5+</span> </li>
+										</ul>
+									</div>
+									<div class="linha-coluna">
+										<button class="drop-button dropdown-toggle" onclick="ShowDropMenu(7)">Proximidade de Transportes Publicos <i class="fas fa-angle-down"></i></button>
+										<ul class="dropdown-menu tab-menu">
+											<li><span class="dropdown-menu-title">Proximidade de Transportes Publicos</span></li>
+											<li><input type="radio" name="prox" id="transportespublicos_sim"><span class="align-text">Sim</span></li>
+											<li><input type="radio" name="prox" id="transportespublicos_nao"><span class="align-text">Não</span></li>
+										</ul>
+									</div>
+									<div class="linha-coluna">
+										<button class="drop-button dropdown-toggle" onclick="ShowDropMenu(8)">Idade <i class="fas fa-angle-down"></i></button>
+										<ul class="dropdown-menu tab-menu">
+											<li><span class="dropdown-menu-title">Idade</span></li>
+											<li><input type="checkbox" onclick="ClearCheck2(0)" name="group2[]" value="opc1"><span class="align-text">Menos de 5 anos</span> </li>
+											<li><input type="checkbox" onclick="ClearCheck2(1)" name="group2[]" value="opc2"><span class="align-text">De 5 a 10 anos</span> </li>
+											<li><input type="checkbox" onclick="ClearCheck2(2)" name="group2[]" value="opc3"><span class="align-text">Maior que 10 anos</span> </li>
+											<li><a href="#">Limpar &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+										</ul>
+									</div>
+									<div class="linha-coluna spacer"></div>
+								</div>
+							</div>
+						</center>
+					</div>
+				</div>
+			</div>
+		</header>
+	<br><br><br><br><br><br><br><br><br>
+<center>
+	<div id="resultados" style="padding-top: 200px; display: none; background-color: rgb(245, 245, 245);">
+		Resultados do seu imovel
+		<p>
+			<textarea id="texta1" style="width: 300px; height: 200px;" readonly></textarea>
+			<textarea id="texta2" style="width: 300px; height: 200px;" readonly></textarea>
+			<textarea id="texta3" style="width: 300px; height: 200px;" readonly></textarea>
+		</p>
+
+		<p>
+			<button onclick="showfin()" class="buttonsa">Fazer Financeamento</button>
+		</p><br><br>
+	</div>
+	<div id="financiamentotab" style="display: none;">
+		<br><br>
+		<label for="entradainicial">Entrada Inicial</label>
+		<input type="text" id="entradainicial" name="entradainicial"><br><br>
+
+		<label for="anoss">Anos</label>
+		<input type="text" id="anoss" name="anoss"><br><br>
+
+		<button id="btnfinan" onclick="finan()" class="buttonsa">Financiar</button><br><br>
+
+		
+	</div>
+	<div id="resultadosfinan" style="display: none;">
+		<br><br>Resultados de financiamento
+		<p>
+			<textarea id="textb1" style="width: 400px; height: 200px;" readonly></textarea>
+			<textarea id="textb2" style="width: 400px; height: 200px;" readonly></textarea>
+			<textarea id="textb3" style="width: 400px; height: 200px;" readonly></textarea><br><br>
+		</p>
+		<button onclick="clearr()" class="buttonsa">Fazer nova pesquisa</button><br><br>
+	</div>
+
+	<div id="anunciosmain" style="padding-top: 200px;">
+		<h2>Anúncios destacados</h2>
+
+		<table>
+			<tbdody>
+				<tr>
+					<td>
+						<img src="assets/1.PNG">
+					</td>
+					<td>
+						<img src="assets/2.PNG">
+					</td>
+					<td>
+						<img src="assets/3.PNG">
+					</td>
+				  </tr>
+				  <tr>
+					<td>
+						<img src="assets/4.PNG">
+					</td>
+					<td>
+						<img src="assets/5.PNG">
+					</td>
+					<td>
+						<img src="assets/6.PNG">
+					</td>
+				  </tr>
+			</tbdody>
+		</table>
+	</div>
+
+	<div id="icon-box" style="background-color:#f5f5f5;">
+	<h2>No Imovirtual vai encontrar</h2>
+	<table>
+		<tbody>
+		  <tr>
+			<td>
+				<img src="icons/building.png">
+				<p>apartamentos</p>
+			</td>
+			<td>
+				<img src="icons/house.png">
+				<p>moradias</p>
+			</td>
+			<td>
+				<img src="icons/bed.png">
+				<p>quartos</p>
+			</td>
+			<td>
+				<img src="icons/tree.png">
+				<p>terrenos</p>
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+				<img src="icons/shop.png">
+				<p>lojas</p>
+			</td>
+			<td>
+				<img src="icons/warehouse.png">
+				<p>armazéns</p>
+			</td>
+			<td>
+				<img src="icons/hotels.png">
+				<p>prédios</p>
+			</td>
+			<td>
+				<img src="icons/office-worker.png">
+				<p>escritórios</p>
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+				<img src="icons/garage.png">
+				<p>garagens</p>
+			</td>
+			<td>
+				<img src="icons/farm.png">
+				<p>quintas e herdades</p>
+			</td>
+			<td>
+				<img src="icons/trespassing.png">
+				<p>trespasses</p>
+			</td>
+			<td>
+				<img src="icons/enterprise.png">
+				<p>terrenos</p>
+			</td>
+		  </tr>
+		</tbody>
+		</table>
+	</div>
+
+	<div id="blog" style="background-color:#f5f5f5; padding-top: 5px;">
+		<h2>Blog</h2>
+		<img src="assets/blog.PNG" alt="blog">
+		<p><button style="background-color: #C33A32; color: white; border-color: transparent; border-radius: 2px;">Mais Artigos</button></p><br>
+	</div>
+</center>
+	
+	
+	<!--FOOTER AQUI-->
+	<footer>
+		<div>
+			<img src="logofooter.png" alt="Logo Imovirtual">
+		</div>
+		<center>
+			<div>
+				<table>
+					<td>
+						<center>
+							<p>Sobre Nós</p>
+							<p>Ajuda</p>
+							<p>Contacte-nos - Serviço Clientes</p>
+							<p>Preços</p>
+							<p>Termos de Utilização</p>
+							<p>Política de Privacidade</p>
+							<p>Configurações de privacidade</p>
+							<p>Livro de Reclamações online</p>
+							<p>Dicas</p>
+						</center>
+					</td>
+					<td>
+						<center>
+							<h4>Serviços e Ferramentas</h4>
+							<p>Vantagens para Profissionais</p>
+							<p>Imovalor</p>
+							<p>Relatório Mercado</p>
+						</center>
+					</td>
+					<td>
+						<center>
+							<h4>Mapa do Site</h4>
+							<p>Mapa do Site</p>
+							<p>Mapa de distritos</p>
+							<p>Blog</p>
+							<p>Lista de Agências</p>
+							<p>Carreiras</p>
+						</center>
+					</td>
+					<td>
+						<center>
+							<img src="assets/imagemfooter.PNG">
+						</center>
+					</td>
+				</table>
+			</div>
+		</center>
+	</footer>
+	<script src="logica.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!---->

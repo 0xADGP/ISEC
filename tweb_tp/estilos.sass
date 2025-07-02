@@ -1,0 +1,487 @@
+@charset "utf-8"
+
+body
+  height: 100vh
+  margin: 0
+  font-family: Helvetica, “Helvetica Neue”, Arial, sans-serif
+  display: flex
+  flex-direction: column
+
+td img
+  height: 130
+  width: 130px
+
+body div h2, tbody td
+  padding: 20px
+
+header
+  min-height: 50px
+  background: #fff
+
+footer
+  margin-top: auto
+  padding: 60px
+  min-height: 50px
+  background: #fff
+
+img
+  display: flex
+  max-width: 100%
+
+footer
+  td
+    vertical-align: top
+    padding-right: 100px
+
+  p
+    font-size: 13px
+    text-align: left
+
+#anunciosd
+  padding-top: 200px
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)
+  footer
+    table, thead, tbody, th, td, tr
+      display: block
+
+  td
+    border: none
+    border-bottom: 1px solid #eee
+    position: relative
+    padding-left: 50%
+
+    &:before
+      position: absolute
+      top: 6px
+      left: 6px
+      width: 45%
+      padding-right: 10px
+      white-space: nowrap
+
+/*START
+
+h1
+  font-size: 1.8em
+
+nav
+  height: fit-content
+  color: rgb(97, 97, 97)
+  font-size: 13px
+
+.separador-mobile
+  display: none
+  background-color: rgb(97, 97, 97)
+  box-shadow: 0
+  height: 0.4px
+  border: 0
+  position: absolute
+  margin-top: -5px
+
+header
+  z-index: 9
+  padding-bottom: 170px
+
+.nav-logo
+  display: inline-block
+
+.nav-logo-mobile
+  display: none
+
+.nav-logo img
+  width: 100px
+
+.nav-bar
+  list-style: none
+  display: inline-block
+  margin: 0
+
+  li
+    display: inline-block
+    padding: 20px 8px
+    box-sizing: border-box
+
+.navbar-right
+  float: right
+
+.nav-bar a
+  text-decoration: none
+  color: inherit
+  padding: 20px 8px
+
+nav .dropdown-toggle::after
+  display: inline-block
+  font-style: normal
+  font-variant: normal
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  font-family: "Font Awesome 5 Free"
+  font-weight: 600
+  content: "\f0d7"
+
+.nav-bar a:hover
+  background-color: rgb(206, 206, 206)
+
+.dropdown-menu-dobule
+  display: flex
+
+  /*remover
+  flex-direction: row
+  flex-wrap: wrap
+
+  .dropdown-menu-dobule
+    float: right
+
+.dropdown-menu
+  position: absolute
+  display: none
+
+  /*===================================NONE
+  background-color: white
+  padding: 15px
+  margin-top: 20px
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+  z-index: 1
+
+nav .dropdown-menu
+  a
+    padding: 0
+    margin: 0
+
+  li
+    padding: 0px
+    margin: 0
+    padding-bottom: 15px
+
+    ul
+      padding: 0px
+      margin: 0
+      padding-top: 10px
+
+      li
+        padding: 0px
+        padding-bottom: 5px
+
+  a:hover
+    background-color: transparent
+
+.dropdown-menu
+  li
+    display: block
+
+  a
+    color: inherit
+
+.add-ad
+  font-size: 14px
+  font-weight: 600
+  color: #21a4b8
+  background-color: transparent
+  border: 1px solid #21a4b8
+  border-radius: 2px
+  padding: 10px 25px
+  margin-top: -100px
+
+  &:hover
+    background-color: #21a4b836
+
+/*HERO IMAGE
+
+.hero-image
+  background-image: linear-gradient(rgba(0, 0, 0, 0.548), rgba(48, 48, 48, 0.295)), url(assets/hero_image.jpg)
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  height: 500px
+  margin-top: -20px
+
+.text-center
+  color: white
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.336)
+  text-align: center
+  padding: 100px 0px 50px
+
+.tab-container
+  display: grid
+
+.tab-box-wrapper
+  width: 80%
+  margin-left: auto
+  margin-right: auto
+
+.tab a
+  font-size: 13px
+  background-color: white
+  padding: 15px
+
+  &:first-child
+    color: rgb(31, 154, 173)
+
+  &:last-child
+    font-size: 13px
+    background-color: rgb(221, 221, 221)
+    margin-top: 5px
+
+#pesquisar
+  background-color: white
+  height: fit-content
+  box-sizing: border-box
+  padding-top: 20px
+  padding-bottom: 10px
+  color: rgb(97, 97, 97)
+  font-size: 12px
+  width: 800px
+
+.linha
+  display: flex
+  flex-direction: row
+  justify-content: center
+  justify-items: center
+  flex-wrap: wrap
+
+.linha-coluna
+  box-sizing: border-box
+  padding: 10px 0px 10px 8px
+
+.spacer
+  width: 85px
+
+.linha-coluna
+  a
+    border: 1px solid rgb(175, 175, 175)
+    padding: 8px 16px
+    text-decoration: none
+    color: inherit
+
+  input
+    border: 1px solid rgb(175, 175, 175)
+    box-sizing: border-box
+    height: 32px
+    width: 400px
+    margin-top: -10px
+
+  button
+    border: 1px solid rgb(175, 175, 175)
+    background-color: white
+    padding: 8px 16px
+    margin-top: -10px
+    color: inherit
+    font-size: inherit
+
+.search button
+  background-color: rgb(31, 154, 173)
+  color: white
+
+.gps
+  position: absolute
+  margin-left: 10px
+
+.drop-button
+  border-radius: 20px
+  cursor: pointer
+  color: inherit
+  font-size: inherit
+
+.tab-menu
+  text-align: left
+  background-color: white
+  margin: 1px
+  color: rgb(43, 42, 42)
+  padding: 10px
+  border-radius: 3px
+  box-shadow: 8px 8px 16px 8px rgba(0, 0, 0, 0.2)
+
+  a
+    border: none
+    padding: 0
+
+  li:first-child
+    margin-bottom: 15px
+
+.dropdown-menu-title
+  font-size: 15px
+  font-weight: 600
+
+.tab-menu
+  input[type^="text"]
+    padding: 0
+    width: 100px
+    border: rgb(175, 175, 175) solid 1px
+    border-radius: 3px
+    margin: 0px 0px 15px
+
+  a
+    font-size: 13px
+    font-weight: normal
+
+  input
+    &[type^="radio"]
+      padding: 0
+      margin: 0
+      height: 20px
+      width: 20px
+      color: rgb(31, 154, 173)
+
+    &[type^="check"]
+      padding: 0
+      margin: 0
+      height: 20px
+      width: 20px
+      color: rgb(31, 154, 173)
+      margin-bottom: 10px
+
+.align-text
+  margin-top: 4px
+  position: absolute
+  padding-left: 5px
+
+.tab
+  font-size: 13px
+  margin-left: -577px
+
+@media only screen and (max-width: 1100px)
+  nav
+    height: 50px
+    font-size: 15px
+
+  .mobile-menu
+    background-color: white
+    width: 250px
+    height: 100%
+    position: fixed
+    right: 0px
+    box-shadow: 0px 0px 10px 5px rgb(97, 97, 97)
+    display: none
+
+  nav .nav-bar
+    display: block
+    padding-top: 20px
+
+  /* .nav-bar a:hover{
+   *	background-color: transparent;
+   *}
+
+  .nav-bar li
+    display: block
+    padding: 10px 0px
+    box-sizing: border-box
+
+  .navbar-right
+    float: none
+
+  nav
+    .dropdown-menu
+      position: inherit
+      box-shadow: 0px 0px 0px 0px
+
+    .dropdown-menu-dobule
+      li
+        display: none
+
+      .mobile-topic
+        display: block
+
+  .separador-mobile
+    display: block
+    width: 80%
+
+  .nav-logo
+    display: none
+
+  .nav-logo-mobile
+    display: inline-block
+    position: absolute
+    padding: 0
+    margin: 0
+    margin-top: 7px
+    margin-left: 20px
+
+  .menu-button-mobile
+    position: absolute
+    right: 30px
+    margin-top: 15px
+    z-index: 1
+    cursor: pointer
+
+    &::after
+      display: inline-block
+      font-style: normal
+      font-variant: normal
+      text-rendering: auto
+      -webkit-font-smoothing: antialiased
+      font-family: "Font Awesome 5 Free"
+      font-weight: 600
+      font-size: 20px
+      content: "\f0c9"
+
+  .open::after
+    display: inline-block
+    font-style: normal
+    font-variant: normal
+    text-rendering: auto
+    -webkit-font-smoothing: antialiased
+    font-family: "Font Awesome 5 Free"
+    font-weight: 600
+    font-size: 25px
+    content: "\f00d"
+    position: fixed
+
+  #pesquisar
+    left: 20%
+    right: 20%
+    width: auto
+
+  .lng
+    display: none
+
+  .lng-show
+    display: block
+    padding-left: 0
+    margin-top: 0px
+    padding-top: 10px
+
+  .tab
+    justify-content: flex-start
+    margin-left: 0px
+
+.show
+  display: block
+
+/*END
+
+#anunciosmain img
+  width: 380px
+  height: 250px
+
+.buttonsa
+  box-shadow: inset 0px 1px 0px 0px #cf866c
+  background: linear-gradient(to bottom, #d0451b 5%, #bc3315 100%)
+  background-color: #d0451b
+  border-radius: 3px
+  border: 1px solid #942911
+  display: inline-block
+  cursor: pointer
+  color: #ffffff
+  font-family: Arial
+  font-size: 13px
+  padding: 6px 24px
+  text-decoration: none
+  text-shadow: 0px 1px 0px #854629
+
+  &:hover
+    background: linear-gradient(to bottom, #bc3315 5%, #d0451b 100%)
+    background-color: #bc3315
+
+  &:active
+    position: relative
+    top: 1px
+
+#resultados textarea
+  font-size: 15px !important
+  border-radius: 2px !important
+  border-color: transparent !important
+  background-color: rgb(245, 245, 245) !important
+
+#resultadosfinan textarea
+  font-size: 15px
+  border-radius: 2px
+  border-color: transparent
