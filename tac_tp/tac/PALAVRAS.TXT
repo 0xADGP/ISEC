@@ -1,0 +1,8 @@
+ASM              $
+COMPUTADOR       $
+MOV              $
+PROGRAMACAO      $
+TECNOLOGIAS      $
+TAC              $
+INFORMATICA      $
+ASSEMBLY         $

@@ -1,0 +1,10 @@
+SANDRO          9453         
+JOAO            8342         
+LUIS            7534         
+TIAGO           6452         
+MANEL           5453         
+TIGAS           4453         
+PRIMO           3579         
+ALEX             843         
+TONI             739         
+WINNER           643
