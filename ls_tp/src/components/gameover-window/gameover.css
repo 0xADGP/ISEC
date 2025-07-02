@@ -1,0 +1,23 @@
+#gameover{
+    position: absolute !important;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.644);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameover-panel{
+    height: 150px;
+    width: 220px;
+    background-color: var(--lGray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.close{
+    cursor: pointer;
+}

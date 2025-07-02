@@ -1,0 +1,27 @@
+#info-panel{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.display{
+    height: 25px;
+    width: 65px;
+    background-color: var(--dGray);
+    color: white;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 2.5px;
+    color: rgb(160, 160, 160);
+}
+
+#info-panel label{
+    cursor: pointer;
+}

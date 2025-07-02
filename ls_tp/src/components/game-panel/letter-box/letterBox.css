@@ -1,0 +1,21 @@
+.letter-box{
+    height: 28px;
+    width: 28px;
+    background-color: var(--dGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+    /*Evitar selecao da letra pelo usuario*/
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.hovered{
+    background-color: var(--lGray);
+    cursor: default !important;
+}
+

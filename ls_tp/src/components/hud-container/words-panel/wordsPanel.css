@@ -1,0 +1,17 @@
+.words-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.padding{
+    padding-right: 10px;
+}
+
+.crossed{
+    text-decoration: line-through;
+}

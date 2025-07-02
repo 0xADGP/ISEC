@@ -1,0 +1,25 @@
+#game-panel{
+    height: 400px;
+    width: fit-content;
+    background-color: var(--lGray);
+    background-color: var(--lGray);
+    padding: 0px 10px;
+    border-radius: 5px 0 0px 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 4px;
+}
+
+.level1{
+    grid-template-columns: auto auto auto auto auto auto !important;
+}
+
+.level2{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+}
+
+.level3{
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+}

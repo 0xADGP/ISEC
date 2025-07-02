@@ -1,0 +1,8 @@
+#info-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-grow: 1;
+    gap: 10px;
+}
